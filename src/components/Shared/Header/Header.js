@@ -7,9 +7,9 @@ import logo from "../../../images/medicare-logo.png"
 const Header = () => {
     return (
         <div>
-            <Navbar bg="dark" variant="dark">
+            <Navbar fixed="top" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand as={HashLink} to="/home">
                         <img src={logo} alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle />
@@ -20,7 +20,7 @@ const Header = () => {
                         <Nav.Link as={HashLink} className="text-white" to="/healthGuideLine">Health Guide Line</Nav.Link>
                         <Nav.Link as={HashLink} className="text-white" to="/login">Login</Nav.Link>
                         <Navbar.Text className="text-primary">
-                            Signed in as: <a>Mark Otto</a>
+                            Signed in as:
                         </Navbar.Text>
                     </Navbar.Collapse>
 

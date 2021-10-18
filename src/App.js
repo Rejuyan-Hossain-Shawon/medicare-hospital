@@ -5,6 +5,7 @@ import About from './components/About/About';
 import HealthGuideLine from './components/HealthGuideLine/HealthGuideLine';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import Footer from './components/Shared/Footer/Footer';
 import Header from './components/Shared/Header/Header';
 import Services from './components/Shared/Services/Services';
 
@@ -36,6 +37,7 @@ function App() {
             <Services></Services>
           </Route>
         </Switch>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );
