@@ -1,10 +1,11 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Card, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Doctor = (props) => {
-    console.log(props.doctor);
-    const { name, designation, picture, position } = props.doctor;
-    console.log(designation);
+
+    const { _id, name, designation, picture, position } = props.doctor;
+
     return (
         <Col>
             <Card>
@@ -17,6 +18,7 @@ const Doctor = (props) => {
                     <Card.Text>
                         {position}
                     </Card.Text>
+                    <Link to={`/doctors/${_id}`}><Button>Details</Button></Link>
                 </Card.Body>
             </Card>
         </Col>

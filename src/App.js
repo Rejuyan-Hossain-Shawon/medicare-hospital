@@ -12,6 +12,7 @@ import NotFound from './components/NotFound/NotFound';
 import Diagnostics from './components/Shared/Services/Diagnostics/Diagnostics';
 import Ambulance from './components/Shared/Services/Ambulance/Ambulance';
 import Doctors from './components/Shared/Services/Doctors/Doctors';
+import DoctorDetails from './components/Shared/Services/Doctors/Doctor/DoctorDetails/DoctorDetails';
 
 function App() {
   return (
@@ -37,9 +38,13 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/doctors/:id">
+            <DoctorDetails></DoctorDetails>
+          </Route>
           <Route path="/doctors">
             <Doctors></Doctors>
           </Route>
+
           <Route path="/diagnostics">
             <Diagnostics></Diagnostics>
           </Route>

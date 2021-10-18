@@ -10,7 +10,7 @@ const Doctors = () => {
             .then(res => res.json())
             .then(data => setDoctors(data))
     }, [])
-    // event handler for single doctor 
+
 
     return (
         <div>
