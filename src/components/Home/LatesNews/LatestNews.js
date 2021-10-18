@@ -7,7 +7,7 @@ import SingleArticle from './SingleArticle/SingleArticle';
 const LatestNews = () => {
     const [news, setNews] = useState([]);
     useEffect(() => {
-        fetch("https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=421fdb3673b449fca41d70ef4d37bda3")
+        fetch("./healthNews.json")
             .then(res => res.json())
             .then(data => {
                 setNews((data.articles).slice(0, 8));

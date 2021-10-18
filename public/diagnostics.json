@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "616dab5f6642f6c72a860c7f",
+    "price": "$341",
+    "duration": 28,
+    "instructor": "Gross Romero",
+    "testName": "Urine Test",
+    "picture":"https://i.ibb.co/RQZTgBb/urine2.webp"
+  },
+  {
+    "_id": "616dab5ffcd1d30656a32abc",
+    "price": "$36",
+    "duration": 22,
+    "instructor": "Manning Holden",
+    "testName": "Blood Test",
+    "picture":"https://i.ibb.co/q9Sqbfj/blood1.webp"
+  },
+  {
+    "_id": "616dab5fbbcb903893b6f528",
+    "price": "$38",
+    "duration": 30,
+    "instructor": "Anne kidne",
+    "testName": "Genetic Testing",
+    "picture":"https://i.ibb.co/PjYRQLh/genetic2.jpg"
+  },
+  {
+    "_id": "616dab5f511cae26efbecb09",
+    "price": "$331",
+    "duration": 39,
+    "instructor": "Le Mccarty",
+    "testName": "Thyroid Tests",
+    "picture":"https://i.ibb.co/PgWyLNh/thyroid2.webp"
+  },
+  {
+    "_id": "616dab5f502eb4670fdd9322",
+    "price": "$197",
+    "duration": 34,
+    "instructor": "Powell Copeland",
+    "testName": "CT Scans",
+    "picture":"https://i.ibb.co/TwtLfvW/ctScan2.png"
+  },
+  {
+    "_id": "616dab5f502eb4789770fdd9322",
+    "price": "$197",
+    "duration": 34,
+    "instructor": "Powell Holden",
+    "testName": "Endoscopy",
+    "picture":"https://i.ibb.co/r4xMhdc/endoscopy2.jpg"
+  }
+]

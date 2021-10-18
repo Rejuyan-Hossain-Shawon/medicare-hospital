@@ -35,6 +35,7 @@ const Footer = () => {
                 </Card>
 
             </CardGroup>
+            <p>@ Copy Right Reserved to Rejuyan Hossain Shawon</p>
         </div>
     );
 };
