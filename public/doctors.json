@@ -1,0 +1,69 @@
+[
+  {
+    "_id": "616da37f6f9e17624ad61015",
+    "position": "Professor",
+    "designation": "Doctor",
+    "picture": "https://i.ibb.co/5vnWq4X/doctor6.jpg",
+    "age": 38,
+    "name": "Cooley Thompson",
+    "email": "cooleythompson@bolax.com",
+    "phone": "+1 (807) 431-2677",
+    "address": "609 McKibben Street, Manitou, New York, 3988"
+  },
+  {
+    "_id": "616da37fc4957260b7cf398d",
+    "position": "Asistant Professor",
+    "designation": "Doctor",
+    "picture": "https://i.ibb.co/Gk7nwjK/doctor5.jpg",
+    "age": 24,
+    "name": "Powers Carter",
+    "email": "powerscarter@bolax.com",
+    "phone": "+1 (982) 504-3835",
+    "address": "904 Dumont Avenue, Hartsville/Hartley, Mississippi, 6975"
+  },
+  {
+    "_id": "616da37f3c08fc109c6aec4e",
+    "position": "Associate professor",
+    "designation": "Doctor",
+    "picture": "https://i.ibb.co/M9kY4bX/doctor1.jpg",
+    "age": 28,
+    "name": "Alisa Merritt",
+    "email": "alisamerritt@bolax.com",
+    "phone": "+1 (837) 522-2756",
+    "address": "563 Dearborn Court, Brenton, Missouri, 9389"
+  },
+  {
+    "_id": "616da37f307743c110ec3eea",
+    "position": "Associate Professor",
+    "designation": "Doctor",
+    "picture": "https://i.ibb.co/W0YYDNQ/doctor2.jpg",
+    "age": 40,
+    "name": "Jacklyn Mayer",
+    "email": "jacklynmayer@bolax.com",
+    "phone": "+1 (829) 419-2588",
+    "address": "767 Bulwer Place, Camas, Kansas, 2076"
+  },
+  {
+    "_id": "616da37fb074adabcd4182b6",
+    "position": "Asistant Professor",
+    "designation": "Doctor",
+    "picture": "https://i.ibb.co/bgNZgVg/doctor3.jpg",
+    "age": 30,
+    "name": "Janet Simon",
+    "email": "janetsimon@bolax.com",
+    "phone": "+1 (895) 555-3560",
+    "address": "161 Howard Avenue, Bladensburg, Pennsylvania, 1323"
+  },
+  {
+    "_id": "616da37fc5a08bf51b00cc58",
+    "position": "MBBS",
+    "designation": "Doctor",
+    "picture": "https://i.ibb.co/p2N3wnw/doctor4.jpg",
+    "age": 24,
+    "name": "Burke Bentley",
+    "email": "burkebentley@bolax.com",
+    "phone": "+1 (932) 434-2227",
+    "address": "353 Brown Street, Defiance, Oregon, 743"
+  }
+ 
+]

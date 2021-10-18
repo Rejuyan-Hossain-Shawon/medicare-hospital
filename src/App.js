@@ -11,6 +11,7 @@ import Services from './components/Shared/Services/Services';
 import NotFound from './components/NotFound/NotFound';
 import Diagnostics from './components/Shared/Services/Diagnostics/Diagnostics';
 import Ambulance from './components/Shared/Services/Ambulance/Ambulance';
+import Doctors from './components/Shared/Services/Doctors/Doctors';
 
 function App() {
   return (
@@ -36,8 +37,8 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/services">
-            <Services></Services>
+          <Route path="/doctors">
+            <Doctors></Doctors>
           </Route>
           <Route path="/diagnostics">
             <Diagnostics></Diagnostics>
