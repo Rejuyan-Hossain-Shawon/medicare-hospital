@@ -6,7 +6,7 @@ import logo from "../../../images/medicare-logo.png"
 
 const Header = () => {
     return (
-        <div>
+        <div className="mb-5 pb-5">
             <Navbar fixed="top" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand as={HashLink} to="/home">

@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import banner1 from "../../../images/banner-1.jpg"
 import banner2 from "../../../images/banner-2.jpg"
+import banner3 from "../../../images/banner-3.png"
 
 const Banner = () => {
 
@@ -31,6 +32,15 @@ const Banner = () => {
                     <h3>YOU AND YOUR DOCTOR</h3>
                     <p>Donec libero dui, dapibus non leo et, molestie faucibus risus. In fermentum tortor et posuere laoreet. Morbi pharetra velit ut varius semper. Donec accumsan et lacus at posuere.</p>
                 </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={banner3}
+                    alt="Second slide"
+                />
+
+
             </Carousel.Item>
 
         </Carousel>
