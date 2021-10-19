@@ -5,7 +5,7 @@ import logo from "../../../images/medicare-logo.png"
 const Footer = () => {
     return (
         <div className="bg-secondary mt-5 " >
-            <CardGroup className="w-50 mx-auto bg-secondary d-flex justify-content-center align-items-center ">
+            <CardGroup className="w-50 mx-auto bg-secondary d-flex-md justify-content-center align-items-center ">
                 <Card className="bg-secondary text-white border-0">
 
                     <Card.Body>

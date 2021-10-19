@@ -25,7 +25,7 @@ const LatestNews = () => {
     return (
         <div className="mt-5">
             <h2 className="text-primary">Latest News In Health Related Issue</h2>
-            <Row xs={2} md={4} className="g-4">
+            <Row xs={1} sm={2} md={4} className="g-4">
 
 
                 {

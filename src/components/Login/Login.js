@@ -60,7 +60,7 @@ const Login = () => {
                     <Form.Control onBlur={handlePassword} type="password" placeholder="Password" />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                    <Form.Check onClick={handleCheckBox} type="checkbox" label="Already Have An Account" />
+                    <Form.Check onClick={handleCheckBox} type="checkbox" label="Already Have An Account?" />
                 </Form.Group>
 
                 <Button variant="primary" type="submit">

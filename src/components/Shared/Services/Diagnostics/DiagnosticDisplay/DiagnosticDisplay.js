@@ -2,6 +2,10 @@ import React from 'react';
 import { Card, Col, Button } from 'react-bootstrap';
 
 const DiagnosticDisplay = (props) => {
+    const handleApplyBtn = () => {
+        alert(`You Have to pay ${price}`);
+
+    }
 
     const { duration, instructor, picture, price, testName } = props.element;
     return (
@@ -19,7 +23,7 @@ const DiagnosticDisplay = (props) => {
                     <Card.Text>
                         Price:{price}
                     </Card.Text>
-                    <Button>Apply</Button>
+                    <Button onClick={handleApplyBtn}>Apply</Button>
                 </Card.Body>
             </Card>
         </Col>

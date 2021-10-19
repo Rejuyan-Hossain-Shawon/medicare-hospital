@@ -14,7 +14,7 @@ const Header = () => {
 
     return (
         <div className="mb-5 pb-5">
-            <Navbar fixed="top" bg="dark" variant="dark">
+            <Navbar expand="lg" fixed="top" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand as={HashLink} to="/home">
                         <img src={logo} alt="" />

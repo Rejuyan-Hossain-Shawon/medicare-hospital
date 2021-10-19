@@ -6,13 +6,13 @@ import doctor from "../../images/headDoctor.png"
 
 const About = () => {
     return (
-        <div>
-            <Row className="d-flex justify-content-center align-items-center" style={{ height: "300px" }}>
-                <Col md={4}>
+        <div className="my-5 ">
+            <Row className="d-flex-lg justify-content-center align-items-center" >
+                <Col sm={12} md={4}>
                     <img style={{ height: "250px" }} src={founder} alt="" />
                 </Col>
 
-                <Col md={6}>
+                <Col sm={12} md={6}>
                     <Card>
                         <Card.Header className="text-info" as="h1">Founder Chairman</Card.Header>
                         <Card.Header as="h6">Medicare Clinic</Card.Header>
@@ -30,8 +30,8 @@ const About = () => {
 
 
 
-            <Row className="d-flex justify-content-center align-items-center" style={{ height: "300px" }}>
-                <Col md={6}>
+            <Row className="d-flex-lg justify-content-center align-items-center" >
+                <Col sm={12} md={6}>
                     <Card>
                         <Card.Header className="text-info" as="h3">Co Chairman</Card.Header>
                         <Card.Header as="h6">Medicare Clinic</Card.Header>
@@ -46,7 +46,7 @@ const About = () => {
                 </Col>
 
 
-                <Col md={4}>
+                <Col sm={12} md={4}>
                     <img style={{ height: "250px" }} src={doctor} alt="" />
                 </Col>
             </Row>
