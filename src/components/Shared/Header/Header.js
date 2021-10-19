@@ -1,15 +1,16 @@
 import React from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
-import useFirebase from '../../../hooks/useFirebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import logo from "../../../images/medicare-logo.png"
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
 
-    const { user, logOut } = useFirebase();
+
+    const { user, logOut } = useAuth();
 
     return (
         <div className="mb-5 pb-5">
