@@ -18,15 +18,9 @@ const useFirebase = () => {
     // handle google sign in with event handler 
     const handleGoogleSignIn = () => {
         setIsLoading(true);
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user);
+        return signInWithPopup(auth, googleProvider);
+        // function return for redirect url from login page
 
-
-                setError("");
-            })
-            .catch(error => setError(error.message))
-            .finally(() => setIsLoading(false));
 
 
     }
@@ -73,20 +67,9 @@ const useFirebase = () => {
     const accountRegistration = (email, password) => {
         setIsLoading(true);
 
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((result) => {
+        return createUserWithEmailAndPassword(auth, email, password)
+        // function return for redirect url from login page
 
-                setUser(result.user);
-
-                setError("");
-
-            })
-            .catch((error) => {
-                setError(error.message);
-                setUser({});
-
-            })
-            .finally(() => setIsLoading(false))
 
     }
 
@@ -94,14 +77,9 @@ const useFirebase = () => {
 
     const accountLogin = (email, password) => {
         setIsLoading(true);
-        signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                const user = result.user;
+        return signInWithEmailAndPassword(auth, email, password)
+        // function return for redirect url from login page
 
-                setError("");
-            })
-            .catch(error => setError(error.message))
-            .finally(() => setIsLoading(false));
     }
 
 
@@ -117,7 +95,8 @@ const useFirebase = () => {
         user,
         error,
         auth,
-        isLoading
+        isLoading,
+        setIsLoading
     }
 
 }

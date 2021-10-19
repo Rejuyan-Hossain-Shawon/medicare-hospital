@@ -3,13 +3,14 @@ import { Button, Form } from "react-bootstrap";
 import useFirebase from '../../hooks/useFirebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { useHistory, useLocation } from 'react-router';
 
 
 const Login = () => {
     const [account, setAccount] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const { handleGoogleSignIn, error, accountRegistration, setError, accountLogin } = useFirebase();
+    const { handleGoogleSignIn, error, accountRegistration, setUser, setIsLoading, setError, accountLogin } = useFirebase();
 
 
 
@@ -22,6 +23,19 @@ const Login = () => {
     const handlePassword = (e) => {
         setPassword(e.target.value);
     }
+    // handle google login for redirect url 
+    const location = useLocation();
+    const history = useHistory();
+    const redirectUrl = location.state?.from || "/home";
+
+    const googleButtonClickEvent = () => {
+        handleGoogleSignIn()
+            .then(result => {
+                history.push(redirectUrl);
+            })
+    }
+
+
 
 
     // handle submit button form 
@@ -40,7 +54,32 @@ const Login = () => {
         }
 
 
-        account ? accountLogin(email, password) : accountRegistration(email, password);
+        // account ? accountLogin(email, password) : accountRegistration(email, password);
+
+        if (account) {
+            accountLogin(email, password)
+                .then(result => {
+                    setError("");
+                    setUser(result.user);
+                    history.push(redirectUrl);
+                })
+                .catch(error => setError(error.message))
+                .finally(() => setIsLoading(false));
+        }
+        else {
+            accountRegistration(email, password)
+                .then(result => {
+                    setUser(result.user);
+                    setError("");
+                    history.push(redirectUrl);
+                })
+                .catch((error) => {
+                    setError(error.message);
+                    setUser({});
+
+                })
+                .finally(() => setIsLoading(false))
+        }
 
 
     }
@@ -71,7 +110,7 @@ const Login = () => {
 
             <br />
             <h2 className="text-danger">{error}</h2>
-            <Button className="bg-warning text-info fw-bold border-0 fs-5" onClick={handleGoogleSignIn}>
+            <Button className="bg-warning text-info fw-bold border-0 fs-5" onClick={googleButtonClickEvent}>
                 <FontAwesomeIcon className="me-2" icon={faGoogle}></FontAwesomeIcon> Google Sign In</Button>
         </>
 
