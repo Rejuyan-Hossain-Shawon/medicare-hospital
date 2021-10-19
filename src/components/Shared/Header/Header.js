@@ -1,10 +1,16 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
+import useFirebase from '../../../hooks/useFirebase';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import logo from "../../../images/medicare-logo.png"
 
 const Header = () => {
+
+    const { user, logOut } = useFirebase();
+
     return (
         <div className="mb-5 pb-5">
             <Navbar fixed="top" bg="dark" variant="dark">
@@ -18,10 +24,22 @@ const Header = () => {
                         <Nav.Link as={HashLink} className="text-white" to="/about">About</Nav.Link>
                         <Nav.Link as={HashLink} className="text-white" to="/services">Services</Nav.Link>
                         <Nav.Link as={HashLink} className="text-white" to="/healthGuideLine">Health Guide Line</Nav.Link>
-                        <Nav.Link as={HashLink} className="text-white" to="/login">Login</Nav.Link>
-                        <Navbar.Text className="text-primary">
-                            Signed in as:
-                        </Navbar.Text>
+
+                        {
+                            Object.keys(user).length !== 0 ? <Button onClick={logOut}>Log Out</Button> : <Nav.Link as={HashLink} className="text-white" to="/login">Login </Nav.Link>
+                        }
+
+                        {
+                            user.displayName && <Navbar.Text className="text-primary ms-2">
+                                <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>{user.displayName}
+                            </Navbar.Text>
+                        }
+                        {
+                            user.email && <Navbar.Text className="text-primary ms-2">
+                                <FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon>{user.email}
+                            </Navbar.Text>
+                        }
+
                     </Navbar.Collapse>
 
                 </Container>
