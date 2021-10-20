@@ -25,6 +25,7 @@ const Header = () => {
                         <Nav.Link as={HashLink} className="text-white" to="/about">About</Nav.Link>
                         <Nav.Link as={HashLink} className="text-white" to="/services">Services</Nav.Link>
                         <Nav.Link as={HashLink} className="text-white" to="/healthGuideLine">Health Guide Line</Nav.Link>
+                        <Nav.Link as={HashLink} className="text-white" to="/gallery">Gallery</Nav.Link>
 
                         {
                             Object.keys(user).length !== 0 ? <Button onClick={logOut}>Log Out</Button> : <Nav.Link as={HashLink} className="text-white" to="/login">Login </Nav.Link>

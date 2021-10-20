@@ -1,0 +1,11 @@
+.services-card:hover {
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px grey;
+  color: green;
+  transform: scale(1.05);
+}
+
+.services-card {
+  transition-property: transform(scale);
+  transition-duration: 1s;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Services.css";
 import { Card, Col, Row, Button } from 'react-bootstrap';
 import dentist from "../../../images/white-teeth.jpg"
 import cardiologist from "../../../images/cardiologist.jpg"
@@ -12,10 +13,10 @@ const Services = () => {
     return (
         <div className="mt-5 pt-5 p-5">
             <h1 className="text-primary">Services</h1>
-            <Row xs={1} md={3} className="g-3">
+            <Row xs={1} md={3} className="g-3 ">
 
                 <Col>
-                    <Card>
+                    <Card className="services-card">
                         <Card.Img variant="top" src={dentist} />
                         <Card.Body>
                             <Card.Title className="fw-bold">Dentist</Card.Title>
@@ -27,7 +28,7 @@ const Services = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card>
+                    <Card className="services-card">
                         <Card.Img variant="top" src={cardiologist} />
                         <Card.Body>
                             <Card.Title className="fw-bold">Cardiologist</Card.Title>
@@ -39,7 +40,7 @@ const Services = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card>
+                    <Card className="services-card">
                         <Card.Img variant="top" src={eyeSpecialist} />
                         <Card.Body>
                             <Card.Title className="fw-bold">Eye Specialist</Card.Title>
@@ -51,7 +52,7 @@ const Services = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card>
+                    <Card className="services-card">
                         <Card.Img variant="top" src={pediatrician} />
                         <Card.Body>
                             <Card.Title className="fw-bold">Pediatrician</Card.Title>
@@ -63,7 +64,7 @@ const Services = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card>
+                    <Card className="services-card">
                         <Card.Img variant="top" src={lab} />
                         <Card.Body>
                             <Card.Title className="fw-bold">Diagnostic Lab</Card.Title>
@@ -75,7 +76,7 @@ const Services = () => {
                     </Card>
                 </Col>
                 <Col>
-                    <Card>
+                    <Card className="services-card">
                         <Card.Img variant="top" src={ambulance} />
                         <Card.Body>
                             <Card.Title className="fw-bold">Ambulance Services</Card.Title>

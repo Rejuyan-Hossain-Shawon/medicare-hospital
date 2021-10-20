@@ -15,6 +15,7 @@ import Doctors from './components/Shared/Services/Doctors/Doctors';
 import DoctorDetails from './components/Shared/Services/Doctors/Doctor/DoctorDetails/DoctorDetails';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Gallery from './components/Gallery/Gallery';
 
 function App() {
   return (
@@ -29,12 +30,12 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/about">
-              <About></About>
+            <Route path="/gallery">
+              <Gallery></Gallery>
             </Route>
-            {/* <Route path="/services">
-              <Services></Services>
-            </Route> */}
+            <PrivateRoute path="/about">
+              <About></About>
+            </PrivateRoute>
             <PrivateRoute path="/services">
               <Services></Services>
             </PrivateRoute>
@@ -47,13 +48,12 @@ function App() {
             <Route path="/doctors/:id">
               <DoctorDetails></DoctorDetails>
             </Route>
-            <Route path="/doctors">
+            <PrivateRoute path="/doctors">
               <Doctors></Doctors>
-            </Route>
-
-            <Route path="/diagnostics">
+            </PrivateRoute>
+            <PrivateRoute path="/diagnostics">
               <Diagnostics></Diagnostics>
-            </Route>
+            </PrivateRoute>
             <Route path="/ambulance">
               <Ambulance></Ambulance>
             </Route>
@@ -63,7 +63,6 @@ function App() {
           </Switch>
           <Footer></Footer>
         </BrowserRouter>
-
       </AuthProvider>
     </div>
   );
